@@ -242,12 +242,31 @@
   </script>
   <main>
     <section class="hero" id="home">
+      <div class="front-nav">
+      <ul id="nav-list">
+        <!-- Close button for dropdown -->
+        <span class="dropdown-close-btn" id="closeBtn">×</span>
+        <li><a href="#home" class="navhover">Home</a></li>
+        <li><a href="team.html" class="navhover">Team</a></li>
+        <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
+        <li><a href="#benefits" class="navhover">Benefits</a></li>
+        <li><a href="about.html" class="navhover">About</a></li>
+        <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
+        
+        <li><a href="./contact.html" class="navhover">Contact</a></li>
+        <li><a href="#reviews" class="navhover">Reviews</a></li>
+        <li><a href="auth.html" class="navhover">Sign In</a></li>
+       
+      </ul>
+    </div>
+      <div class="container-header">
       <div class="header2"><h1>Travel Beyond Limits</h1></div>
       <h3>
         Connect, Explore, and Discover Together. <br />
         BuddyTrail: Your Journey Begins with the Perfect Travel Companion.
       </h3>
       <a href="book.html" id="btn">Book now</a>
+    </div>
     </section>
 
     <section id="locations">
@@ -259,21 +278,7 @@
     <!-- Hamburger button for mobile -->
     <button class="hamburger" id="hamburger">☰</button>
 
-    <ul id="nav-list">
-      <!-- Close button for dropdown -->
-      <span class="dropdown-close-btn" id="closeBtn">×</span>
-      <li><a href="#home" class="navhover">Home</a></li>
-      <li><a href="team.html" class="navhover">Team</a></li>
-      <li><a href="#deals" class="navhover">Exclusive Deals</a></li>
-      <li><a href="#benefits" class="navhover">Benefits</a></li>
-      <li><a href="about.html" class="navhover">About</a></li>
-      <li><a href="#itineraries" class="navhover">Travel Itineraries</a></li>
-      
-      <li><a href="./contact.html" class="navhover">Contact</a></li>
-      <li><a href="#reviews" class="navhover">Reviews</a></li>
-      <li><a href="auth.html" class="navhover">Sign In</a></li>
-     
-    </ul>
+   
 
     <!-- Toggle Button -->
     <button class="mode-toggle" id="modeToggle">
@@ -299,6 +304,18 @@
 
     closeBtn.addEventListener("click", function () {
       navList.classList.remove("active");
+    });
+    document.addEventListener('scroll', () => {
+        const nav = document.querySelector('.front-nav');
+        const navlist = document.querySelector('.nav-list'); 
+
+        if (window.scrollY > 50) {
+            nav.style.backgroundColor = 'black';  
+            navlist.style.color = '#fff'; 
+        } else {
+            nav.style.backgroundColor = 'transparent';  
+            navlist.style.color = '#fff';  
+        }
     });
 
     // Scroll event to handle header transparency
@@ -362,13 +379,13 @@
     </script>
     <main>
       
-       
+       <div class="paragraph">
 
         <h3>
           We handle everything, from finding the ideal travel buddy to
           selecting your perfect hotel, flight, and destination.
         </h3>
-
+      </div>
       </header>
     </section>
     <section id="benefits">

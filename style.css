@@ -47,11 +47,13 @@ nav ul {
   align-items: center;
   list-style-type: none;
   padding: 0;
+  
 }
 
 .hi ul li a{
   background-color: #fff;
   color: blue;
+  
   min-height:15vh;
   font-size: 1.8rem;
   font-weight: 500;
@@ -75,6 +77,7 @@ nav ul li {
 nav a {
   color: #ffffff;
   text-decoration: none;
+  
 }
 
 
@@ -301,13 +304,20 @@ nav {
   margin-left: 34px;
 }
 
+.front-nav{
+  align-items: center;
+  top: 0%;
+  position: fixed;
+  z-index: 12;
+  background-color: none;
+  padding-top: 20px;
+}
 #nav-list {
   display: flex;
   gap: 1rem; /* Adjusted gap for better spacing */
   list-style: none;
-  margin-left: 3px;
   padding: 0;
-  align-items: center;
+
 }
 
 #nav-list li a {
@@ -316,6 +326,18 @@ nav {
   font-weight: 400;
   white-space: nowrap;
   font-size: 20px;
+  
+}
+.nav a::after {
+  content: '';
+  
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
 }
 
 .hamburger {
@@ -370,7 +392,10 @@ nav {
   #nav-list.active {
     display: flex; /* Show menu when active */
   }
+ .container-header{
+ justify-content: center;
 
+ }
   /* Close button styles */
   .dropdown-close-btn {
     display: block; /* Visible only in the dropdown menu */
@@ -401,6 +426,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   align-items: center;
   text-align: center;
 }
@@ -456,7 +482,10 @@ nav {
   }
 }
 
-
+.paragraph
+{
+  text-align: center;
+}
 .hero h3 {
   font-size: 25px;
   line-height: 40px;
